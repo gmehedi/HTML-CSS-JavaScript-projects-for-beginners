@@ -1,0 +1,58 @@
+
+
+.navbar {
+    display: grid; /* Make the logo a flex container */
+    grid-template-columns: 200px auto;
+    height: 40px; /* Set a fixed height for the navbar */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.389);
+}
+
+.logo {
+    display: flex; /* Allows lin*/
+    justify-self: flex-start; /* Align logo to the left */
+    height: 40px;
+    width: 40px;
+    padding: 0px 0px 0px 20px;
+   
+}
+
+.logo, .home-items > a {
+    transition: transform 0.3s ease;
+}
+
+.logo:hover, .home-items > a:hover {
+    transform: scale(1.2);
+}
+
+.home-items > a:hover {
+    transform: scale(1.2);
+    color: rgb(0, 68, 215);
+}
+
+.logo {
+    color: rgb(0, 68, 215);
+}
+
+.logo img {
+    width: 100%; /* Make the image fill the width of the logo container */
+    height: 100%; /* Make the image fill the height of the logo container */
+}
+
+.home-items {
+    display: flex; /* Enables grid layout */
+    justify-content: flex-end;
+    align-items: center; /* Vertically centers items */
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+    gap: 40px;
+    padding: 0px 20px 0px 0px;
+    transition: transform 0.3s ease;
+}
+
+.home-items > a {
+    background-color: rgba(205, 95, 36, 0);
+    color:  rgb(47, 215, 0);
+}
+
+
+
