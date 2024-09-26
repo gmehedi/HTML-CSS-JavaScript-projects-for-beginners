@@ -1,58 +1,173 @@
 
 
 .navbar {
-    display: grid; /* Make the logo a flex container */
-    grid-template-columns: 200px auto;
-    height: 40px; /* Set a fixed height for the navbar */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.389);
+    display: flex; /* Make the logo a flex container */
+    height: 70px; /* Set a fixed height for the navbar */
+    align-items: center; /* Vertically centers items */
+    justify-content: space-between; /* Space between the left and right items */
+    border-bottom: 1px solid rgba(58, 33, 33, 0.389);
+    background-color: rgba(0, 89, 255, 0);
 }
 
-.logo {
+.nav-shopify-icon-holder-view {
+    display: flex; /* Allows lin*/
+    align-items: center;         /* Center items vertically */
+    justify-content: center;
+    height: 44px;
+    width: 124px;
+    gap: 4px;
+    margin: 0px 75px;
+    background-color: rgba(166, 0, 255, 0);
+}
+.nav-shopify-icon {
     display: flex; /* Allows lin*/
     justify-self: flex-start; /* Align logo to the left */
-    height: 40px;
-    width: 40px;
-    padding: 0px 0px 0px 20px;
-   
+    height: 34px;
+    width: 34px;
 }
-
-.logo, .home-items > a {
-    transition: transform 0.3s ease;
-}
-
-.logo:hover, .home-items > a:hover {
-    transform: scale(1.2);
-}
-
-.home-items > a:hover {
-    transform: scale(1.2);
-    color: rgb(0, 68, 215);
-}
-
-.logo {
-    color: rgb(0, 68, 215);
-}
-
-.logo img {
+.nav-shopify-icon img {
     width: 100%; /* Make the image fill the width of the logo container */
     height: 100%; /* Make the image fill the height of the logo container */
 }
+.nav-shopify-icon-holder-view h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold; /* Makes the font bold */
+    font-style: italic; /* Makes the font italic */
+    color: rgb(0, 0, 0);
+}
+.menu-items {
+    display: flex ; /* Enables grid layout */
+    flex: 1; /* Flexible width for the middle item */
+    align-items: center; /* Vertically centers items */
+    height: 100%;
+    gap: 50px;
+    background-color: rgba(47, 226, 136, 0);
+}
 
-.home-items {
+@media (max-width: 1300px) { /* if Screen width less than or equel 1300, then excute this bloc*/
+    .menu-items {
+      display: none;
+    }
+}
+@media (max-width: 1300px) {
+    .menu-items {
+      display: none;
+      background-color: aquamarine;
+    }
+}
+
+.solutions, .pricing, .resources, .whats-new {
+    font-size: 18px;
+}
+
+.right-holder-view {
     display: flex; /* Enables grid layout */
+    justify-content: space-between;
+    align-items: center; /* Vertically centers items */
+    margin-left: 75px;
+    height: 40px;
+    width: 250px;
+    margin-right: 100px;
+    background-color: rgba(255, 111, 0, 0);
+}
+
+@media (max-width: 1000px) { /* if Screen width less than or equel 1000px, then excute this bloc*/
+    .right-holder-view {
+      display: none;
+    }
+}
+
+.log-in {
+    display: flex; /* Enables grid layout */
+    justify-content: flex-start;
+    align-items: center; /* Vertically centers items */
+    height: 40px;
+    width: 80px;
+    padding-left: 20px;
+    background-color: rgba(255, 111, 0, 0);
+}
+
+.free-trail {
+    display: flex; /* Enables grid layout */
+    flex: 1;
     justify-content: flex-end;
     align-items: center; /* Vertically centers items */
-    background-color: rgb(255, 255, 255);
     height: 40px;
-    gap: 40px;
-    padding: 0px 20px 0px 0px;
+    font-size: 18px;
+    font-weight: bold; /* Makes the font bold */
+    padding-right: 20px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    color: white;
+}
+
+.nav-side-bar-holder-view {
+    display: flex; /* Enables grid layout */
+    justify-content: space-between;
+    align-items: center; /* Vertically centers items */
+    height: 40px;
+    width: 150px;
+    margin-right: 75px;
+    background-color: rgba(255, 111, 0, 0);
+}
+
+.nav-side-bar-logo {
+    display: flex; /* Allows lin*/
+    justify-self: flex-start; /* Align logo to the left */
+    height: 24px;
+    width: 24px;
+}
+
+.free-trail-text {
+    display: flex; /* Enables grid layout */
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center; /* Vertically centers items */
+    height: 40px;
+    font-size: 18px;
+    font-weight: normal; /* Makes the font bold */
+    padding-right: 20px;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+}
+
+@media (min-width: 1000px) { /* if Screen width less than or equel 1000px, then excute this bloc*/
+    .nav-side-bar-holder-view {
+      display: none;
+    }
+}
+
+.nav-shopify-icon-holder-view, .menu-items > div, .right-holder-view > div {
     transition: transform 0.3s ease;
 }
 
-.home-items > a {
-    background-color: rgba(205, 95, 36, 0);
-    color:  rgb(47, 215, 0);
+.nav-shopify-icon-holder-view:hover, .right-holder-view>div:hover {
+    transform: scale(1.10);
 }
 
+.arrow-down:hover {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
 
+.arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    display: inline-block;
+    margin-left: 10px; /* Space between the arrow and the preceding text */
+    margin-bottom: 3px;
+    vertical-align: middle; /* Vertically center the arrow */
+  }
 
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
