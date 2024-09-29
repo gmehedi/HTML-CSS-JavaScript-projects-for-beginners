@@ -1,11 +1,15 @@
-
+.container-view {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; /* Stacks items vertically */
+}
 
 .navbar {
     display: flex; /* Make the logo a flex container */
     height: 70px; /* Set a fixed height for the navbar */
     align-items: center; /* Vertically centers items */
     justify-content: space-between; /* Space between the left and right items */
-    border-bottom: 1px solid rgba(58, 33, 33, 0.389);
+    border-bottom: 0.5px solid rgba(58, 33, 33, 0.389);
     background-color: rgba(0, 89, 255, 0);
 }
 
@@ -43,6 +47,7 @@
     height: 100%;
     gap: 50px;
     background-color: rgba(47, 226, 136, 0);
+    cursor: pointer;
 }
 
 @media (max-width: 1300px) { /* if Screen width less than or equel 1300, then excute this bloc*/
@@ -53,7 +58,7 @@
 @media (max-width: 1300px) {
     .menu-items {
       display: none;
-      background-color: aquamarine;
+      background-color: rgba(127, 255, 212, 0);
     }
 }
 
@@ -65,10 +70,9 @@
     display: flex; /* Enables grid layout */
     justify-content: space-between;
     align-items: center; /* Vertically centers items */
-    margin-left: 75px;
     height: 40px;
     width: 250px;
-    margin-right: 100px;
+    margin-right: 75px;
     background-color: rgba(255, 111, 0, 0);
 }
 
@@ -109,7 +113,8 @@
     height: 40px;
     width: 150px;
     margin-right: 75px;
-    background-color: rgba(255, 111, 0, 0);
+    background-color: rgba(229, 255, 0, 0);
+    transition: transform 0.5s ease;
 }
 
 .nav-side-bar-logo {
@@ -144,11 +149,7 @@
 
 .nav-shopify-icon-holder-view:hover, .right-holder-view>div:hover {
     transform: scale(1.10);
-}
-
-.arrow-down:hover {
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
+    cursor: pointer;
 }
 
 .arrow {
@@ -160,14 +161,79 @@
     margin-left: 10px; /* Space between the arrow and the preceding text */
     margin-bottom: 3px;
     vertical-align: middle; /* Vertically center the arrow */
-  }
+}
 
-  .up {
+.up {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
-  }
+    transition: transform 0.3s ease;
+}
   
-  .down {
+.down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-  }
+    transition: transform 0.3s ease;
+}
+
+.down.downArrowRotate {
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    cursor: pointer;
+}
+
+.solutions-menu-holder-view {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    margin: auto 75px;
+    gap: 24px;
+    background-color: rgba(225, 255, 0, 0);
+    opacity: 0;
+    transition: opacity 0.5s ease, display 0.5s ease; /* Animate opacity and position */
+}
+  /* Show the solutions menu with opacity and transform animation */
+.solutions-menu-holder-view.show {
+    opacity: 1;    /* Fully visible */
+}
+
+.start-icon-view, .sell-icon-view, .market-icon-view, .manage-icon-view {
+    display: flex;
+    align-items: start;
+    height: 44px;
+    background-color: rgba(0, 255, 183, 0);
+    border-bottom: 0.5px solid rgba(58, 33, 33, 0.389);
+}
+
+.start-icon-view > div, .sell-icon-view > div, .market-icon-view > div, .manage-icon-view > div {
+    display: flex;
+    margin-left: 8px;
+}
+
+.solutions-menu-holder-view  img {
+    width: 44px; /* Make the image fill the width of the logo container */
+    height: 44px; /* Make the image fill the height of the logo container */
+}
+
+.solutions-menu-holder-view > div {
+    flex: 1;
+    height: 100%; /* Make the image fill the height of the logo container */
+    align-items: center;
+    font-size: 18px;
+    font-weight: medium; /* Makes the font bold */
+}
+
+
+.solutions-menu-items-holder-view {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 75px;
+    gap: 44px;
+    background-color: rgb(187, 255, 0);
+}
+
+.start-description-view, .sell-description-view, .market-description-view, .manage-description-view {
+    align-items: center;
+    background-color: rgb(255, 0, 200);
+}
