@@ -10,24 +10,25 @@
     align-items: center; /* Vertically centers items */
     justify-content: space-between; /* Space between the left and right items */
     border-bottom: 0.5px solid rgba(58, 33, 33, 0.389);
-    background-color: rgba(0, 89, 255, 0);
+    background-color: rgba(157, 0, 255, 0);
 }
 
 .nav-shopify-icon-holder-view {
     display: flex; /* Allows lin*/
     align-items: center;         /* Center items vertically */
-    justify-content: center;
+    justify-content: flex-start;
     height: 44px;
-    width: 124px;
+    width: 160px;
     gap: 4px;
     margin: 0px 75px;
-    background-color: rgba(166, 0, 255, 0);
+    background-color: rgba(0, 255, 60, 0);
 }
 .nav-shopify-icon {
     display: flex; /* Allows lin*/
     justify-self: flex-start; /* Align logo to the left */
     height: 34px;
     width: 34px;
+    background-color: rgba(43, 255, 0, 0);
 }
 .nav-shopify-icon img {
     width: 100%; /* Make the image fill the width of the logo container */
@@ -38,6 +39,7 @@
     font-size: 28px;
     font-weight: bold; /* Makes the font bold */
     font-style: italic; /* Makes the font italic */
+    font-family: sans-serif;
     color: rgb(0, 0, 0);
 }
 .menu-items {
@@ -64,6 +66,7 @@
 
 .solutions, .pricing, .resources, .whats-new {
     font-size: 18px;
+    font-family: sans-serif;
 }
 
 .right-holder-view {
@@ -100,6 +103,7 @@
     height: 40px;
     font-size: 18px;
     font-weight: bold; /* Makes the font bold */
+    font-family: sans-serif;
     padding-right: 20px;
     background-color: rgb(0, 0, 0);
     border-radius: 20px;
@@ -132,6 +136,7 @@
     height: 40px;
     font-size: 18px;
     font-weight: normal; /* Makes the font bold */
+    font-family: sans-serif;
     padding-right: 20px;
     border-radius: 20px;
     color: rgb(0, 0, 0);
@@ -190,7 +195,7 @@
     gap: 24px;
     background-color: rgba(225, 255, 0, 0);
     opacity: 0;
-    transition: opacity 0.5s ease, display 0.5s ease; /* Animate opacity and position */
+    transition: opacity 0.3s ease; /* Animate opacity and position */
 }
   /* Show the solutions menu with opacity and transform animation */
 .solutions-menu-holder-view.show {
@@ -221,19 +226,51 @@
     align-items: center;
     font-size: 18px;
     font-weight: medium; /* Makes the font bold */
+    font-family: sans-serif;
 }
-
 
 .solutions-menu-items-holder-view {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: top;
     margin: auto 75px;
-    gap: 44px;
-    background-color: rgb(187, 255, 0);
+    background-color: rgba(38, 255, 0, 0);
+    gap: 24px;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Animate opacity and position */
+}
+
+.solutions-menu-items-holder-view.show {
+    opacity: 1;    /* Fully visible */
 }
 
 .start-description-view, .sell-description-view, .market-description-view, .manage-description-view {
-    align-items: center;
-    background-color: rgb(255, 0, 200);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    list-style: none; /* Removes the default list bullets */
+    background-color: rgba(0, 255, 234, 0);
+
+}
+
+.start-description-view > li a, .sell-description-view > li a, .market-description-view > li a, .manage-description-view > li a {
+    align-items: flex-start;
+    display: flex;
+    background-color: rgba(255, 0, 200, 0);
+    text-decoration: none; /* Removes the underline from links */
+    color: rgb(0, 0, 0); /* Sets the text color */
+    font-size: 16px; /* Adjusts font size */
+    font-weight: medium;
+    font-family: sans-serif;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px; 
+}
+
+.extra-text {
+   color: rgba(0, 0, 0, 0.68); /* You can adjust text color as needed */
+   font-size: 13px; /* Adjust font size if necessary */
+   display: block; /* Force the extra text to appear on a new line */
+   font-family: sans-serif;
+   margin-top: 4px; /* Adjust the space between the two lines */
 }
